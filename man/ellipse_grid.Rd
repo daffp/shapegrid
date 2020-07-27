@@ -24,6 +24,5 @@ Code taken from \url{https://people.sc.fsu.edu/~jburkardt/cpp_src/ellipse_grid/e
 }
 \examples{
 p = shapegrid::ellipse_grid(25, c(1,1), c(0,0))
-mat = matrix(p, nc=2, byrow=TRUE)
-plot(mat)
+plot(p)
 }
