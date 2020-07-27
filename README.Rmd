@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  out.width = "100%",
+  fig.path = "man/figures/README-"
+)
+```
+
+
+# shapegrid
+
+Creates a grid of points within an ellipse. Code taken from https://people.sc.fsu.edu/~jburkardt/cpp_src/ellipse_grid/ellipse_grid.html.
+
+Install package dependencies:
+
+```{r, eval=FALSE}
+pkgs = c("Rcpp", "remotes" )
+install.packages(pkgs)
+```
+
+Then install `shapegrid` package from github:
+
+```{r, eval=FALSE}
+remotes::install_github("daffp/shapegrid")
+```
+
+Run some examples to see that it is working
+
+```{r}
+library(shapegrid)
+p = shapegrid::ellipse_grid(10, c(1,10), c(1,5))
+plot(p, pch=16, cex=0.5)
+```
