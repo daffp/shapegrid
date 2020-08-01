@@ -7,3 +7,9 @@ ellipse_gridcpp <- function(n, R, C) {
     .Call('_shapegrid_ellipse_gridcpp', PACKAGE = 'shapegrid', n, R, C)
 }
 
+#' @useDynLib shapegrid
+#' @importFrom Rcpp sourceCpp
+triangle_gridcpp <- function(n, V) {
+    .Call('_shapegrid_triangle_gridcpp', PACKAGE = 'shapegrid', n, V)
+}
+

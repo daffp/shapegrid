@@ -18,6 +18,3 @@ ellipse_grid = function(N, radius, center=c(0,0)){
    
    return(mat)
 }
-    
-
-
