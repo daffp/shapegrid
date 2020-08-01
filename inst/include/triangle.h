@@ -58,7 +58,7 @@ double *triangle_grid ( int n, std::vector<double> t )
 //    of the points in the triangle.
 //
 //   Minor changes  by dp:2020: C style array to std::vector
-
+//
 //
   {
     int i;

@@ -5,7 +5,7 @@ Version: 0.001
 Date: 2020-07-25
 Author: david
 Maintainer: david <daffp.gh@gmail.com>
-Description: Creates a grid of points within an ellipse. Code taken from \url{https://people.sc.fsu.edu/~jburkardt/cpp_src/ellipse_grid/ellipse_grid.html}.
+Description: Creates a grid of points within an ellipse. Code taken from <https://people.sc.fsu.edu/~jburkardt/cpp_src/>.
 License: LGPL (>= 3.0)
 Imports: Rcpp (>= 1.0.4)
 LinkingTo: Rcpp

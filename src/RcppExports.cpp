@@ -18,6 +18,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// polygon_gridcpp
+SEXP polygon_gridcpp(int n, int nv, Rcpp::NumericVector V);
+RcppExport SEXP _shapegrid_polygon_gridcpp(SEXP nSEXP, SEXP nvSEXP, SEXP VSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    Rcpp::traits::input_parameter< int >::type nv(nvSEXP);
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type V(VSEXP);
+    rcpp_result_gen = Rcpp::wrap(polygon_gridcpp(n, nv, V));
+    return rcpp_result_gen;
+END_RCPP
+}
 // triangle_gridcpp
 NumericVector triangle_gridcpp(int n, Rcpp::NumericVector V);
 RcppExport SEXP _shapegrid_triangle_gridcpp(SEXP nSEXP, SEXP VSEXP) {
@@ -33,6 +46,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_shapegrid_ellipse_gridcpp", (DL_FUNC) &_shapegrid_ellipse_gridcpp, 3},
+    {"_shapegrid_polygon_gridcpp", (DL_FUNC) &_shapegrid_polygon_gridcpp, 3},
     {"_shapegrid_triangle_gridcpp", (DL_FUNC) &_shapegrid_triangle_gridcpp, 2},
     {NULL, NULL, 0}
 };

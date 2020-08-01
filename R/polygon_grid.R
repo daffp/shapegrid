@@ -1,0 +1,23 @@
+#' Polygon grid
+#' 
+#' Create a grid of points within a polygon (DON'T USE -- doesn't work correctly. See plot in examples.)
+#'
+#' @param N The number of subintervals each side should be divided into i.e. there are (N+1) points on a side.
+#' @param NV The number of vertices in the polygon.
+#' @param vertices A vector of length \code{2.NV} giving the (x,y) coordinates of each vertex of the polygon or a matrix with two rows and \code{2.NV} columns of vertex coordinates.
+#' @return Returns a matrix with the x and y positions of each point in the grid.
+#' @details Code taken from \url{https://people.sc.fsu.edu/~jburkardt/cpp_src/polygon_grid/polygon_grid.html}. 
+#' @examples
+#' v = cbind( c(0, 0.5), c(0.5,0), c(1,1), c(1.5,0),c(2,0.5))
+#' par(mfrow=c(1,3))
+#' for(i in 1:3){
+#'   pts = polygon_grid(10, ncol(v)-i+1, c(v[, seq(ncol(v)-i+1)]))
+#'   plot(pts, main=bquote(.(i)~ "vertices")) 
+#' }
+#' @export
+polygon_grid = function(N, NV, vertices){
+  
+  v = c(vertices)
+  mat = polygon_gridcpp(N, NV, v)
+  return(mat)
+}
